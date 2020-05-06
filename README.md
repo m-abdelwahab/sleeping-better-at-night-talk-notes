@@ -155,7 +155,7 @@ More and more teams are moving towards automated tests.
 
 A great testing framework is [Cypress](https://www.cypress.io/).
 
-Tomasz gives a quick demo at **23:30** where he tests a todo-app using Cypress.
+Tomasz gives a quick demo at [23:30](https://egghead.io/lessons/egghead-egghead-talks-sleeping-better-at-night#t=1408) where he tests a todo-app using Cypress.
 
 Here are two great courses on egghead.io if you're looking to learn more about Cypress:
 
