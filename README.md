@@ -10,13 +10,13 @@ Here's the [talk link](https://egghead.io/lessons/egghead-egghead-talks-sleeping
   - [Table Of Contents](#table-of-contents)
   - [Why are you afraid of pushing to production of Friday?](#why-are-you-afraid-of-pushing-to-production-of-friday)
   - [The Testing Spectrum](#the-testing-spectrum)
-    - [**linting & formatting tools**](#linting--formatting-tools)
-    - [**Types**](#types)
-    - [**Unit Tests**](#unit-tests)
-    - [**UI Testing**](#ui-testing)
-    - [**E2E Testing**](#e2e-testing)
-    - [**Visual Regression**](#visual-regression)
-    - [**User Testing**](#user-testing)
+    - [linting & formatting tools](#linting--formatting-tools)
+    - [Types](#types)
+    - [Unit Tests](#unit-tests)
+    - [UI Testing](#ui-testing)
+    - [E2E Testing](#e2e-testing)
+    - [Visual Regression](#visual-regression)
+    - [User Testing](#user-testing)
   - [Key Takeaways](#key-takeaways)
 
 ## Why are you afraid of pushing to production of Friday?
@@ -53,7 +53,7 @@ This is what the testing spectrum looks like:
 
 Testing comes in many shapes and forms:
 
-### **linting & formatting tools**
+### linting & formatting tools
 
 Linting tools when (i.e. [ESLint](https://eslint.org/)) combined with formatting tools ( i.e. [Prettier](https://prettier.io/)) count as testing.
 
@@ -65,7 +65,7 @@ ESLint also helps in catching bugs; for example, you may have written a function
 
 <!-- insert meme about calling the function -->
 
-### **Types**
+### Types
 
 strongly-typed code means you're defining the types of variables you're using in your code.
 You'll define the return type of a function, the types of variables you're passing to the function, etc.
@@ -100,7 +100,7 @@ function add(a: number, b: number): number {
 
 ```
 
-### **Unit Tests**
+### Unit Tests
 
 Unit testing is when you test a component on its own and making sure that it works as expected.
 
@@ -132,7 +132,7 @@ Here's an example of a test:
 
 Writing tests this way, gives you confidence in your software. Because through this testing approach youre answering the question of "Does this code actually work?"
 
-### **UI Testing**
+### UI Testing
 
 UI testing is important for front-end developers.
 
@@ -147,7 +147,7 @@ A cool tool for making sure that your app renders the exact way you want to to r
 
 ![sizzy demo](./assets/sizzy.gif)
 
-### **E2E Testing**
+### E2E Testing
 
 We should not only care about individual components, but how they fit together. That's why some people believe that unit tests are not important.
 
@@ -164,7 +164,7 @@ Here are two great courses on egghead.io if you're looking to learn more about C
 
 Cypress can't test what the user sees, it can see the DOM, CSS classes, but it doesn't have eyes. This is where Visual Regression comes in.
 
-### **Visual Regression**
+### Visual Regression
 
 An awesome tool for visual testing is [Applitools](https://applitools.com/). It's an AI powered visual testing & monitoring software.
 
@@ -184,7 +184,7 @@ Applitools uses AI to detect any changes UI changes compared to the original ver
 
 A great talk about Applitools is by Angie Jones, called ["Your Tests Lack Vision: Adding Eyes To Your Automation Framework"](https://www.youtube.com/watch?v=tkU6E0BlltU).
 
-### **User Testing**
+### User Testing
 
 Talking to your users is an important aspect of testing that is often overlooked. This is to make sure that what you're building is actually what they need.
 
