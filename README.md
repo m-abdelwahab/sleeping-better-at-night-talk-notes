@@ -1,6 +1,23 @@
 # Sleeping Better At Night
 
-Here's the [talk link](https://egghead.io/lessons/egghead-egghead-talks-sleeping-better-at-night)
+In this talk, [Tomasz](https://twitter.com/tlakomy) gives an overview on why you should test your code, the different types of tests and shares some tools that make testing easier.
+
+Here's the [talk link](https://egghead.io/lessons/egghead-egghead-talks-sleeping-better-at-night) 📹
+
+## Table Of Contents
+
+- [Sleeping Better At Night](#sleeping-better-at-night)
+  - [Table Of Contents](#table-of-contents)
+  - [Why are you afraid of pushing to production of Friday?](#why-are-you-afraid-of-pushing-to-production-of-friday)
+  - [The Testing Spectrum](#the-testing-spectrum)
+    - [**linting & formatting tools**](#linting--formatting-tools)
+    - [**Types**](#types)
+    - [**Unit Tests**](#unit-tests)
+    - [**UI Testing**](#ui-testing)
+    - [**E2E Testing**](#e2e-testing)
+    - [**Visual Regression**](#visual-regression)
+    - [**User Testing**](#user-testing)
+  - [Key Takeaways](#key-takeaways)
 
 ## Why are you afraid of pushing to production of Friday?
 
@@ -128,7 +145,7 @@ For example, no one enjoys ordering an Uber. You need to select a location, whic
 
 A cool tool for making sure that your app renders the exact way you want to to render is [Sizzy](https://sizzy.co)
 
-<iframe title="vimeo-player" src="https://player.vimeo.com/video/344319852" width="640" height="414" frameborder="0" allowfullscreen></iframe>
+![sizzy demo](./assets/sizzy.gif)
 
 ### **E2E Testing**
 
@@ -182,3 +199,7 @@ A great book about user testing is ["Rocket Surgery made easy" by Steve Krug](ht
 - Care about your users and understand their needs.
 - The closer you are to the user (understanding their goals, their behaviors, etc.) === the better tests you'll write. Understanding the user requirements is essential.
 - Take care of yourself. No matter how many tests you have, things can still go wrong and that's okay.
+
+---
+
+This project follows the [all-contributors](https://allcontributors.org/) specification. Contributions of any kind are welcome!
