@@ -44,7 +44,7 @@ Why? because when you press `ctrl+S` to save, if your code isn't formatting, thi
 
 ESLint also helps in catching bugs; for example, you may have written a function and it's not working, only to find out you haven't called the function in the first place.
 
-![forgot-to-call-function-meme](meme.jpg)
+![forgot-to-call-function-meme](./assets/meme.jpg)
 
 <!-- insert meme about calling the function -->
 
