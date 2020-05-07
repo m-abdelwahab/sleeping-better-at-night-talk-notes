@@ -220,11 +220,13 @@ Here are what the tests for a login form look like in Applitools:
 
 <!-- show example of output of applitools -->
 
-Here's an example of a form component that will be tested using Applitools
+Here's an example of a form component that will be tested using Applitools:
 
 ![applitools-before](./assets/applitools.png)
 
 Applitools uses AI to detect any changes UI changes compared to the original version and will highlight the inconsistencies and their cause.
+
+Here is the result of the above Applitools testing: 
 
 ![applitools-after](./assets/aplitools-after.png)
 
