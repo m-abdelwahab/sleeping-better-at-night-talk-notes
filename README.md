@@ -213,7 +213,10 @@ An awesome tool for visual testing is [Applitools](https://applitools.com/). It'
 <!-- image explanation of how applitools work -->
 ![applitools-workflow-visualization](./assets/applitools-visualization.png)
 
-This tool allows us to visually catch errors that we might miss.
+This tool allows us to visually catch errors that we _(the developer)_ might miss.
+
+Here are what the tests for a login form look like in Applitools: 
+![example-applitools-tests](./assets/applitools-testing.png)
 
 <!-- show example of output of applitools -->
 
