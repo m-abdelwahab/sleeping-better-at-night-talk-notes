@@ -168,7 +168,7 @@ test('shows the children when the checkbox is checked',()=>{
 
 Writing tests this way, gives you confidence in your software. Because through this testing approach youre answering the question of "Does this code actually work?"
 
->Learn more by visiting [Testing Javascript](https://www.testingjavascript.com)
+>Learn more about these types of testing methods by visiting [Testing Javascript](https://www.testingjavascript.com)
 
 ### UI Testing
 
@@ -181,7 +181,9 @@ Users only care about two things:
 
 For example, no one enjoys ordering an Uber. You need to select a location, which type of car you're going to ride, which payment method you want, etc. We enjoy the value we get from ordering an Uber. Which is arriving at our desired destination.
 
-A cool tool for making sure that your app renders the exact way you want to to render is [Sizzy](https://sizzy.co)
+It's also important to consider that roughly _(at least)_ 50% of users will access your website on mobile. Testing for the mobile performance of your app is _just as important_ as testing the desktop experience. 
+
+A cool tool for making sure that your app renders the exact way you want it to on all devices is [Sizzy](https://sizzy.co)
 
 ![sizzy demo](./assets/sizzy.gif)
 
