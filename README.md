@@ -195,7 +195,7 @@ We should not only care about individual components, but how they fit together. 
 
 More and more teams are moving towards automated tests.
 
-A great testing framework is [Cypress](https://www.cypress.io/).
+A great testing framework is [Cypress](https://www.cypress.io/). It provides an interactive testing UI for developers to use. 
 
 Tomasz gives a quick demo at [23:30](https://egghead.io/lessons/egghead-egghead-talks-sleeping-better-at-night#t=1408) where he tests a todo-app using Cypress.
 
