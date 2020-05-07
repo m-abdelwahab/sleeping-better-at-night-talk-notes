@@ -114,7 +114,7 @@ Having 100% test coverage doesn't reflect confidence in your software. Unit test
 
 Okay, if you're not going to test all of your code, which parts should you test? Which percent of coverage should you aim for?
 
-One popular opinion about writing tests, is to make sure that your tests resemble the software used
+One popular opinion about writing tests, is to make sure that your tests resemble the way your software is used:
 
 <!-- Kent C Dodds tweet -->
 ![kent-c-dodds-testing-tweet](./assets/kent-testing-tweet.png)
@@ -124,9 +124,9 @@ Here's an example of tests that don't resemble the software used.
 ```js
 it('renders Toggle component',()=>{
   expect(wrapper.find(Toggle)).toHaveLength(1);
+
   // users don't care about props
   expect(wrapper.find(Toggle)).toHaveProp('label','Behold,the best toggle');
-
   expect(wrapper.find(Toggle)).toHaveProp('renderLabelBefore',true);
   expect(wrapper.find(Toggle)).toHaveProp('toggleOnClick',false);
 
@@ -139,7 +139,7 @@ it('renders Toggle component',()=>{
 
 >If you change the implementation of a component, for example you changed it from a React component to a Vue component (Same behavior just different code), your tests should still pass.
 
-A great example of a library that focuses on testing  what the user sees and interacts with is [testing library](https://testing-library.com/).
+A great example of a library that focuses on testing what the user sees and interacts with is [testing library](https://testing-library.com/).
 
 Here's an example of a test:
 
