@@ -189,6 +189,8 @@ A cool tool for making sure that your app renders the exact way you want it to o
 
 ### E2E Testing
 
+>E2E stands for End To End Testing, or the testing of the total product, not just its component parts (units).
+
 We should not only care about individual components, but how they fit together. That's why some people believe that unit tests are not important.
 
 More and more teams are moving towards automated tests.
