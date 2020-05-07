@@ -249,6 +249,9 @@ A great book about user testing is ["Rocket Surgery made easy" by Steve Krug](ht
 - The closer you are to the user (understanding their goals, their behaviors, etc.) === the better tests you'll write. _Understanding the user requirements is essential._
 - Take care of yourself. No matter how many tests you have, things can still go wrong and that's okay.
 
+
+_Don't forget to watch the [post-talk Q&A](https://egghead.io/lessons/egghead-egghead-talks-sleeping-better-at-night#t=2530)_
+
 ---
 
 This project follows the [all-contributors](https://allcontributors.org/) specification. Contributions of any kind are welcome!
