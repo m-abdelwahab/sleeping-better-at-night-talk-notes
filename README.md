@@ -67,7 +67,7 @@ ESLint also helps in catching bugs; for example, you may have written a function
 
 ### Types
 
-strongly-typed code means you're defining the types of variables you're using in your code.
+Strongly-typed code means you're defining the types of variables you're using in your code.
 You'll define the return type of a function, the types of variables you're passing to the function, etc.
 Using a strongly typed language (like [TypeScript](https://www.typescriptlang.org/)) helps in preventing a lot of bugs.
 
@@ -117,6 +117,7 @@ Okay, if you're not going to test all of your code, which parts should you test?
 One popular opinion about writing tests, is to make sure that your tests resemble the software used
 
 <!-- Kent C Dodds tweet -->
+![kent-c-dodds-testing-tweet](./assets/kent-testing-tweet.png)
 
 Here's an example of tests that don't resemble the software used.
 
