@@ -211,6 +211,7 @@ Cypress can't test what the user sees, it can see the DOM, CSS classes, but it d
 An awesome tool for visual testing is [Applitools](https://applitools.com/). It's an AI powered visual testing & monitoring software.
 
 <!-- image explanation of how applitools work -->
+![applitools-workflow-visualization](./assets/applitools-visualization.png)
 
 This tool allows us to visually catch errors that we might miss.
 
