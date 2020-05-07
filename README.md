@@ -23,7 +23,9 @@ Here's the [talk link](https://egghead.io/lessons/egghead-egghead-talks-sleeping
 
 Your code doesn't care about which day of the week it is, it doesn't know the difference between tuesday and friday so why should you?
 
-Here's a useful diagram that demonstrates  the probability you'll break the production build using your YOLO (You Only Live Once) change:
+Here's a useful diagram that demonstrates the probability you'll break the production build using your YOLO (You Only Live Once) change:
+
+![probability-of-breaking-prod-diagram](./assets/probability-diagram.png)
 
 So this brings up an important question: can you avoid this fear of breaking production on Friday? Well the answer is yes. By **testing your code.**
 
@@ -43,13 +45,13 @@ Firstly, there's empathy for your users. You care about there experience. especi
 
 Secondly, there's empathy for other team members. We don't want to make a YOLO change that might break production and force other team members to work  during their time off.
 
-Finally, we care because it makes us feel _safe_. We don't want to worry about work all the time when we're at home
+Finally, we care because it makes us feel _safe_. We don't want to worry about work all the time when we're at home.
 
 ## The Testing Spectrum
 
 This is what the testing spectrum looks like:
 
----
+![testing-spectrum](./assets/testing-spectrum.png)
 
 Testing comes in many shapes and forms:
 
@@ -63,11 +65,9 @@ ESLint also helps in catching bugs; for example, you may have written a function
 
 ![forgot-to-call-function-meme](./assets/meme.jpg)
 
-<!-- insert meme about calling the function -->
-
 ### Types
 
-strongly-typed code means you're defining the types of variables you're using in your code.
+Strongly-typed code means you're defining the types of variables you're using in your code.
 You'll define the return type of a function, the types of variables you're passing to the function, etc.
 Using a strongly typed language (like [TypeScript](https://www.typescriptlang.org/)) helps in preventing a lot of bugs.
 
@@ -114,18 +114,19 @@ Having 100% test coverage doesn't reflect confidence in your software. Unit test
 
 Okay, if you're not going to test all of your code, which parts should you test? Which percent of coverage should you aim for?
 
-One popular opinion about writing tests, is to make sure that your tests resemble the software used
+One popular opinion about writing tests, is to make sure that your tests resemble the way your software is used:
 
 <!-- Kent C Dodds tweet -->
+![kent-c-dodds-testing-tweet](./assets/kent-testing-tweet.png)
 
 Here's an example of tests that don't resemble the software used.
 
 ```js
 it('renders Toggle component',()=>{
   expect(wrapper.find(Toggle)).toHaveLength(1);
+
   // users don't care about props
   expect(wrapper.find(Toggle)).toHaveProp('label','Behold,the best toggle');
-
   expect(wrapper.find(Toggle)).toHaveProp('renderLabelBefore',true);
   expect(wrapper.find(Toggle)).toHaveProp('toggleOnClick',false);
 
@@ -136,11 +137,11 @@ it('renders Toggle component',()=>{
 
 ```
 
->If you change the implementation of a component, for example you changed it from a React component to a Vue component (Same behavior just different code), your tests should still pass.
+>If you change the implementation of a component, for example you changed it from a React component to a Vue component (Same behavior just different code), your tests should still pass. Your tests should not be aware of the implementation beneath what your users experience. 
 
-A great example of a library that focuses on testing  what the user sees and interacts with is [testing library](https://testing-library.com/).
+A great example of a library that focuses on testing what the user sees and interacts with is [testing library](https://testing-library.com/).
 
-Here's an example of a test:
+Here's an example of a much better approach:
 
 ```js
 import React from 'react';
@@ -163,8 +164,11 @@ test('shows the children when the checkbox is checked',()=>{
 
 ```
 <!-- testing  lib code snippet-->
+>Your test should think in terms of props, classes, etc. It should think in terms of text, labels, button text, visible elements, and the things users see and interact with, and their associated accesible elements.  
 
 Writing tests this way, gives you confidence in your software. Because through this testing approach youre answering the question of "Does this code actually work?"
+
+You can learn more about these types of testing methods by visiting [Testing Javascript](https://www.testingjavascript.com)
 
 ### UI Testing
 
@@ -177,17 +181,21 @@ Users only care about two things:
 
 For example, no one enjoys ordering an Uber. You need to select a location, which type of car you're going to ride, which payment method you want, etc. We enjoy the value we get from ordering an Uber. Which is arriving at our desired destination.
 
-A cool tool for making sure that your app renders the exact way you want to to render is [Sizzy](https://sizzy.co)
+It's also important to consider that roughly _(at least)_ 50% of users will access your website on mobile. Testing for the mobile performance of your app is _just as important_ as testing the desktop experience. 
+
+A cool tool for making sure that your app renders the exact way you want it to on all devices is [Sizzy](https://sizzy.co)
 
 ![sizzy demo](./assets/sizzy.gif)
 
 ### E2E Testing
 
-We should not only care about individual components, but how they fit together. That's why some people believe that unit tests are not important.
+>E2E stands for End To End Testing, or the testing of the total product, not just its component parts (units).
+
+We should not only care about individual components, but how they fit together. That's why some people believe that unit tests are not important, when considering the end product. 
 
 More and more teams are moving towards automated tests.
 
-A great testing framework is [Cypress](https://www.cypress.io/).
+A great testing framework is [Cypress](https://www.cypress.io/). It provides an interactive testing UI for developers to use. 
 
 Tomasz gives a quick demo at [23:30](https://egghead.io/lessons/egghead-egghead-talks-sleeping-better-at-night#t=1408) where he tests a todo-app using Cypress.
 
@@ -203,22 +211,29 @@ Cypress can't test what the user sees, it can see the DOM, CSS classes, but it d
 An awesome tool for visual testing is [Applitools](https://applitools.com/). It's an AI powered visual testing & monitoring software.
 
 <!-- image explanation of how applitools work -->
+![applitools-workflow-visualization](./assets/applitools-visualization.png)
 
-This tool allows us to visually catch errors that we might miss.
+This tool allows us to visually catch errors that we _(the developer)_ might miss.
+
+Here are what the tests for a login form look like in Applitools: 
+![example-applitools-tests](./assets/applitools-testing.png)
 
 <!-- show example of output of applitools -->
 
-Here's an example of a form component that will be tested using Applitools
+Here's an example of a form component that will be tested using Applitools:
 
 ![applitools-before](./assets/applitools.png)
 
 Applitools uses AI to detect any changes UI changes compared to the original version and will highlight the inconsistencies and their cause.
+
+Here is the result of the above Applitools testing: 
 
 ![applitools-after](./assets/aplitools-after.png)
 
 A great talk about Applitools is by Angie Jones, called ["Your Tests Lack Vision: Adding Eyes To Your Automation Framework"](https://www.youtube.com/watch?v=tkU6E0BlltU).
 
 ### User Testing
+>the ultimate form of testing
 
 Talking to your users is an important aspect of testing that is often overlooked. This is to make sure that what you're building is actually what they need.
 
@@ -231,8 +246,11 @@ A great book about user testing is ["Rocket Surgery made easy" by Steve Krug](ht
 ## Key Takeaways
 
 - Care about your users and understand their needs.
-- The closer you are to the user (understanding their goals, their behaviors, etc.) === the better tests you'll write. Understanding the user requirements is essential.
+- The closer you are to the user (understanding their goals, their behaviors, etc.) === the better tests you'll write. _Understanding the user requirements is essential._
 - Take care of yourself. No matter how many tests you have, things can still go wrong and that's okay.
+
+
+_Don't forget to watch the [post-talk Q&A](https://egghead.io/lessons/egghead-egghead-talks-sleeping-better-at-night#t=2530)_
 
 ---
 
