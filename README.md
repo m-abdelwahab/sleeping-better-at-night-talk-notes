@@ -246,7 +246,7 @@ A great book about user testing is ["Rocket Surgery made easy" by Steve Krug](ht
 ## Key Takeaways
 
 - Care about your users and understand their needs.
-- The closer you are to the user (understanding their goals, their behaviors, etc.) === the better tests you'll write. Understanding the user requirements is essential.
+- The closer you are to the user (understanding their goals, their behaviors, etc.) === the better tests you'll write. _Understanding the user requirements is essential._
 - Take care of yourself. No matter how many tests you have, things can still go wrong and that's okay.
 
 ---
