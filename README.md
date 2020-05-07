@@ -164,9 +164,11 @@ test('shows the children when the checkbox is checked',()=>{
 
 ```
 <!-- testing  lib code snippet-->
->Your test should think in terms of props, classes, etc. It should think in terms of text, labels, button text, visible elements, and the things users see and interact with. 
+>Your test should think in terms of props, classes, etc. It should think in terms of text, labels, button text, visible elements, and the things users see and interact with, and their associated accesible elements.  
 
 Writing tests this way, gives you confidence in your software. Because through this testing approach youre answering the question of "Does this code actually work?"
+
+>Learn more by visiting [Testing Javascript](https://www.testingjavascript.com)
 
 ### UI Testing
 
