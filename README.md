@@ -137,11 +137,11 @@ it('renders Toggle component',()=>{
 
 ```
 
->If you change the implementation of a component, for example you changed it from a React component to a Vue component (Same behavior just different code), your tests should still pass.
+>If you change the implementation of a component, for example you changed it from a React component to a Vue component (Same behavior just different code), your tests should still pass. Your tests should not be aware of the implementation beneath what your users experience. 
 
 A great example of a library that focuses on testing what the user sees and interacts with is [testing library](https://testing-library.com/).
 
-Here's an example of a test:
+Here's an example of a much better approach:
 
 ```js
 import React from 'react';
@@ -164,6 +164,7 @@ test('shows the children when the checkbox is checked',()=>{
 
 ```
 <!-- testing  lib code snippet-->
+>Your test should think in terms of props, classes, etc. It should think in terms of text, labels, button text, visible elements, and the things users see and interact with. 
 
 Writing tests this way, gives you confidence in your software. Because through this testing approach youre answering the question of "Does this code actually work?"
 
