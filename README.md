@@ -23,7 +23,9 @@ Here's the [talk link](https://egghead.io/lessons/egghead-egghead-talks-sleeping
 
 Your code doesn't care about which day of the week it is, it doesn't know the difference between tuesday and friday so why should you?
 
-Here's a useful diagram that demonstrates  the probability you'll break the production build using your YOLO (You Only Live Once) change:
+Here's a useful diagram that demonstrates the probability you'll break the production build using your YOLO (You Only Live Once) change:
+
+![probability-of-breaking-prod-diagram](./assets/probability-diagram.png)
 
 So this brings up an important question: can you avoid this fear of breaking production on Friday? Well the answer is yes. By **testing your code.**
 
@@ -43,13 +45,13 @@ Firstly, there's empathy for your users. You care about there experience. especi
 
 Secondly, there's empathy for other team members. We don't want to make a YOLO change that might break production and force other team members to work  during their time off.
 
-Finally, we care because it makes us feel _safe_. We don't want to worry about work all the time when we're at home
+Finally, we care because it makes us feel _safe_. We don't want to worry about work all the time when we're at home.
 
 ## The Testing Spectrum
 
 This is what the testing spectrum looks like:
 
----
+![testing-spectrum](./assets/testing-spectrum.png)
 
 Testing comes in many shapes and forms:
 
@@ -62,8 +64,6 @@ Why? because when you press `ctrl+S` to save, if your code isn't formatting, thi
 ESLint also helps in catching bugs; for example, you may have written a function and it's not working, only to find out you haven't called the function in the first place.
 
 ![forgot-to-call-function-meme](./assets/meme.jpg)
-
-<!-- insert meme about calling the function -->
 
 ### Types
 
