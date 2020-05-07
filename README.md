@@ -120,7 +120,21 @@ One popular opinion about writing tests, is to make sure that your tests resembl
 
 Here's an example of tests that don't resemble the software used.
 
-<!-- bad test example code snippet-->
+```js
+it('renders Toggle component',()=>{
+  expect(wrapper.find(Toggle)).toHaveLength(1);
+  // users don't care about props
+  expect(wrapper.find(Toggle)).toHaveProp('label','Behold,the best toggle');
+
+  expect(wrapper.find(Toggle)).toHaveProp('renderLabelBefore',true);
+  expect(wrapper.find(Toggle)).toHaveProp('toggleOnClick',false);
+
+  // testing if a component has a certain class is something that the user doesn't see
+  wrapper.find('.toggle').simulate('click');
+  expect(wrapper.find(Toggle)).toHaveProp('label','Behold,the best toggle');
+})
+
+```
 
 >If you change the implementation of a component, for example you changed it from a React component to a Vue component (Same behavior just different code), your tests should still pass.
 
@@ -128,6 +142,26 @@ A great example of a library that focuses on testing  what the user sees and int
 
 Here's an example of a test:
 
+```js
+import React from 'react';
+import {render,fireEvent} from'@testing-library/react';
+
+import HiddenMessage from './hiddenMessage'
+
+test('shows the children when the checkbox is checked',()=>{
+  const testMessage ='Test Message';
+  const {queryByText,getLabelText,getByText} = render(
+    <HiddenMessage>{testMessage}</HiddenMessage>
+  );
+
+  expect(queryByTxt(testMessage)).toBeNull();
+
+  fireEvent.click(getByLabelText(/show/i));
+
+  expect(getByText(testMessage)).toBeInTheDocument();
+})
+
+```
 <!-- testing  lib code snippet-->
 
 Writing tests this way, gives you confidence in your software. Because through this testing approach youre answering the question of "Does this code actually work?"
