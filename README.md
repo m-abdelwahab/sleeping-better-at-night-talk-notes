@@ -168,7 +168,7 @@ test('shows the children when the checkbox is checked',()=>{
 
 Writing tests this way, gives you confidence in your software. Because through this testing approach youre answering the question of "Does this code actually work?"
 
->Learn more about these types of testing methods by visiting [Testing Javascript](https://www.testingjavascript.com)
+You can learn more about these types of testing methods by visiting [Testing Javascript](https://www.testingjavascript.com)
 
 ### UI Testing
 
