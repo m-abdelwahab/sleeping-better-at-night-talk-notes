@@ -233,6 +233,7 @@ Here is the result of the above Applitools testing:
 A great talk about Applitools is by Angie Jones, called ["Your Tests Lack Vision: Adding Eyes To Your Automation Framework"](https://www.youtube.com/watch?v=tkU6E0BlltU).
 
 ### User Testing
+>the ultimate form of testing
 
 Talking to your users is an important aspect of testing that is often overlooked. This is to make sure that what you're building is actually what they need.
 
